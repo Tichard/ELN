@@ -1,0 +1,303 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/17.1
+Ecrc
+Z0 w1513933497
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dF:/DE0_CV/ip/ELN/simulation
+Z5 8F:/DE0_CV/ip/ELN/eln.vhd
+Z6 FF:/DE0_CV/ip/ELN/eln.vhd
+l0
+L79
+V`Oci1kZ;iW4V25nEU]egQ3
+!s100 k?2f4H^_d]hdSUSbe:Y:51
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1513940586
+!i10b 1
+Z9 !s108 1513940586.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/DE0_CV/ip/ELN/eln.vhd|
+Z11 !s107 F:/DE0_CV/ip/ELN/eln.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+R3
+Z14 DEx4 work 3 crc 0 22 `Oci1kZ;iW4V25nEU]egQ3
+l91
+L88
+VH`k4PEhiKN_A>Hb4Cf6zW3
+!s100 ^?Q`cYXLDi3]oNlldIi5I1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eeln
+R0
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L138
+V:YHFM=U@@O1;CeHCZ0eFi0
+!s100 Z5Ud9`Gc^g7<]ZlKGKjoX0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Artl
+Z15 DEx4 work 16 fifo_nmots_mbits 0 22 EKNI?55>zj8[[A4h=6^nS0
+R14
+Z16 DEx4 work 13 state_machine 0 22 0?I^M@jYgEdEbIjS;ELIi0
+Z17 DEx4 work 10 serialdata 0 22 BBffVXf5Md846_E9zd=4T0
+R1
+R2
+R3
+DEx4 work 3 eln 0 22 :YHFM=U@@O1;CeHCZ0eFi0
+l155
+L147
+V4CHM[HiPEDi^z_7R]1f`V0
+!s100 3caHIJQIUl6lQF8BT11z91
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Efifo_nmots_mbits
+Z18 w1511292016
+R1
+R2
+R3
+R4
+Z19 8F:/DE0_CV/ip/ELN/FIFO_nMots_mBits.vhd
+Z20 FF:/DE0_CV/ip/ELN/FIFO_nMots_mBits.vhd
+l0
+L11
+VEKNI?55>zj8[[A4h=6^nS0
+!s100 aNZaK;mWM1<A2NJK506XP3
+R7
+32
+R8
+!i10b 1
+R9
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/DE0_CV/ip/ELN/FIFO_nMots_mBits.vhd|
+Z22 !s107 F:/DE0_CV/ip/ELN/FIFO_nMots_mBits.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+R15
+l25
+L21
+Vmla?[DUeRD:FD`J5FoZf[1
+!s100 Vj^Yh[6Q`MkDf<f>AZk5e2
+R7
+32
+R8
+!i10b 1
+R9
+R21
+R22
+!i113 1
+R12
+R13
+Eserialdata
+Z23 w1513356302
+R1
+R2
+R3
+R4
+Z24 8F:/DE0_CV/ip/ELN/SerialData.vhd
+Z25 FF:/DE0_CV/ip/ELN/SerialData.vhd
+l0
+L167
+VBBffVXf5Md846_E9zd=4T0
+!s100 MGFBgJRghL6gGP6KGne<g1
+R7
+32
+Z26 !s110 1513940587
+!i10b 1
+Z27 !s108 1513940587.000000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/DE0_CV/ip/ELN/SerialData.vhd|
+Z29 !s107 F:/DE0_CV/ip/ELN/SerialData.vhd|
+!i113 1
+R12
+R13
+Artl
+Z30 DEx4 work 13 uc_serialdata 0 22 [_hS]7jE2I8RB@C4QKTeg3
+Z31 DEx4 work 13 ut_serialdata 0 22 mMaH<[K2bGECkN6T=163R1
+R1
+R2
+R3
+R17
+l178
+L175
+Z32 Vi0N>>0Y]:CM9KK<4GGl;I1
+Z33 !s100 V]15`?<DXPj8E3Aohb0ZR0
+R7
+32
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R12
+R13
+Estate_machine
+R0
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L8
+V0?I^M@jYgEdEbIjS;ELIi0
+!s100 7G_AdbmN`Bg2>lXOl5>gb1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+R16
+l18
+L15
+VTT0f?o6DK;0jg4CcA=0@o3
+!s100 0@bQ]B<P_ESgCIFS9Mi^k0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Euc_serialdata
+R23
+R1
+R2
+R3
+R4
+R24
+R25
+l0
+L15
+V[_hS]7jE2I8RB@C4QKTeg3
+!s100 FLfVLKE@Z>=JnJ^lLXd8A2
+R7
+32
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+R30
+l24
+L21
+Z34 VIJ:@iK]LRIMS2Y36RBih;0
+Z35 !s100 Ak=Phzl`63jojG<m]M8c62
+R7
+32
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R12
+R13
+Eut_serialdata
+R23
+R1
+R2
+R3
+R4
+R24
+R25
+l0
+L76
+VmMaH<[K2bGECkN6T=163R1
+!s100 27G4[GV62T[d47fBfoWX^1
+R7
+32
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+R31
+l89
+L84
+Z36 V@b>`JnUUOkg6eU^MI75VT1
+Z37 !s100 DBZRRJInh5=RN?_3<eh611
+R7
+32
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R12
+R13

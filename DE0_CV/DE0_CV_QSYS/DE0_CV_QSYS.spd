@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/DE0_CV_QSYS_timer.v"
+   type="VERILOG"
+   library="timer" />
+ <file
+   path="simulation/submodules/DE0_CV_QSYS_sysid_qsys.v"
+   type="VERILOG"
+   library="sysid_qsys" />
+ <file
+   path="simulation/submodules/DE0_CV_QSYS_switches.v"
+   type="VERILOG"
+   library="switches" />
+ <file
+   path="simulation/submodules/DE0_CV_QSYS_seg7_digits.v"
+   type="VERILOG"
+   library="seg7_digits" />
+ <file
+   path="simulation/submodules/DE0_CV_QSYS_sdram.v"
+   type="VERILOG"
+   library="sdram" />
+ <file
+   path="simulation/submodules/DE0_CV_QSYS_sdram_test_component.v"
+   type="VERILOG"
+   library="sdram" />
+ <file
+   path="simulation/submodules/DE0_CV_QSYS_pll.vo"
+   type="VERILOG"
+   library="pll" />
+ <file
+   path="simulation/submodules/DE0_CV_QSYS_onchip_mem.hex"
+   type="HEX"
+   library="onchip_mem" />
+ <file
+   path="simulation/submodules/DE0_CV_QSYS_onchip_mem.v"
+   type="VERILOG"
+   library="onchip_mem" />
+ <file
+   path="simulation/submodules/DE0_CV_QSYS_nios2_qsys.v"
+   type="VERILOG"
+   library="nios2_qsys" />
+ <file
+   path="simulation/submodules/altera_avalon_mm_clock_crossing_bridge.v"
+   type="VERILOG"
+   library="mm_clock_crossing_bridge_0" />
+ <file
+   path="simulation/submodules/altera_avalon_dc_fifo.v"
+   type="VERILOG"
+   library="mm_clock_crossing_bridge_0" />
+ <file
+   path="simulation/submodules/altera_dcfifo_synchronizer_bundle.v"
+   type="VERILOG"
+   library="mm_clock_crossing_bridge_0" />
+ <file
+   path="simulation/submodules/altera_std_synchronizer_nocut.v"
+   type="VERILOG"
+   library="mm_clock_crossing_bridge_0" />
+ <file
+   path="simulation/submodules/DE0_CV_QSYS_leds.v"
+   type="VERILOG"
+   library="leds" />
+ <file
+   path="simulation/submodules/DE0_CV_QSYS_keys.v"
+   type="VERILOG"
+   library="keys" />
+ <file
+   path="simulation/submodules/DE0_CV_QSYS_jtag_uart.v"
+   type="VERILOG"
+   library="jtag_uart" />
+ <file path="simulation/DE0_CV_QSYS.vhd" type="VHDL" />
+ <file path="simulation/de0_cv_qsys_rst_controller.vhd" type="VHDL" />
+ <file path="simulation/de0_cv_qsys_rst_controller_001.vhd" type="VHDL" />
+ <topLevel name="DE0_CV_QSYS" />
+ <deviceFamily name="cyclonev" />
+ <modelMap
+   controllerPath="DE0_CV_QSYS.onchip_mem"
+   modelPath="DE0_CV_QSYS.onchip_mem" />
+</simPackage>

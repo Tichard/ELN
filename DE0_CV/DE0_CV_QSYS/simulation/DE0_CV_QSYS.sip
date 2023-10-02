@@ -1,0 +1,26 @@
+set_global_assignment -entity "DE0_CV_QSYS" -library "lib_DE0_CV_QSYS" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "DE0_CV_QSYS" -library "lib_DE0_CV_QSYS" -name IP_TOOL_VERSION "17.1"
+set_global_assignment -entity "DE0_CV_QSYS" -library "lib_DE0_CV_QSYS" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "lib_DE0_CV_QSYS" -name SPD_FILE [file join $::quartus(sip_path) "../DE0_CV_QSYS.spd"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "../../DE0_CV_QSYS.qsys"]
+
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "DE0_CV_QSYS.vhd"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "de0_cv_qsys_rst_controller.vhd"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "de0_cv_qsys_rst_controller_001.vhd"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "submodules/DE0_CV_QSYS_timer.v"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "submodules/DE0_CV_QSYS_sysid_qsys.v"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "submodules/DE0_CV_QSYS_switches.v"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "submodules/DE0_CV_QSYS_seg7_digits.v"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "submodules/DE0_CV_QSYS_sdram.v"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "submodules/DE0_CV_QSYS_sdram_test_component.v"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "submodules/DE0_CV_QSYS_pll.vo"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "submodules/DE0_CV_QSYS_onchip_mem.hex"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "submodules/DE0_CV_QSYS_onchip_mem.v"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "submodules/DE0_CV_QSYS_nios2_qsys.v"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_avalon_mm_clock_crossing_bridge.v"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_avalon_dc_fifo.v"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_dcfifo_synchronizer_bundle.v"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_std_synchronizer_nocut.v"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "submodules/DE0_CV_QSYS_leds.v"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "submodules/DE0_CV_QSYS_keys.v"]
+set_global_assignment -library "lib_DE0_CV_QSYS" -name MISC_FILE [file join $::quartus(sip_path) "submodules/DE0_CV_QSYS_jtag_uart.v"]

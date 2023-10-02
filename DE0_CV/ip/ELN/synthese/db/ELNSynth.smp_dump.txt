@@ -1,0 +1,14 @@
+
+State Machine - |eln|State_machine:machineEtat|State_cr
+Name State_cr.s_Tx_CRC State_cr.s_Tx_Data State_cr.s_Tx_Start State_cr.s_Init 
+State_cr.s_Init 0 0 0 0 
+State_cr.s_Tx_Start 0 0 1 1 
+State_cr.s_Tx_Data 0 1 0 1 
+State_cr.s_Tx_CRC 1 0 0 1 
+
+State Machine - |eln|SerialData:serial|UC_SerialData:UC|Etat_cr
+Name Etat_cr.Serial Etat_cr.DRq_Serial Etat_cr.Load Etat_cr.Idle 
+Etat_cr.Idle 0 0 0 0 
+Etat_cr.Load 0 0 1 1 
+Etat_cr.DRq_Serial 0 1 0 1 
+Etat_cr.Serial 1 0 0 1 

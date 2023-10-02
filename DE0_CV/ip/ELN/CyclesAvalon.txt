@@ -1,0 +1,56 @@
+test complet
+set CyclesAvalon {
+	{50 ELNStatus}
+	{80 ELNControl}
+	{100 ELNFIFO 16#61}
+	{120 ELNFIFO 16#62}
+	{140 ELNStatus}
+	{160 ELNFIFO 16#63}
+	{180 ELNFIFO 16#64}
+	{200 ELNStatus}
+	{230 ELNControl 2#0010001}
+	{260 ELNControl}
+	{300 ELNStatus}
+	{400 ELNStatus}
+	{500 ELNStatus}
+	{600 ELNControl}
+	{1100 ELNFIFO 16#0F}
+	{1120 ELNFIFO 16#FF}
+	{1140 ELNStatus}
+	{1160 ELNFIFO 16#F0}
+	{1180 ELNFIFO 16#AA}
+	{1200 ELNStatus}
+	{1210 ELNControl 2#0001011}
+	{1260 ELNControl}
+	{1400 ELNStatus}
+	{2000 ELNStatus}    
+
+}
+
+test standard
+set CyclesAvalon {
+	{5 ELNControl 2#00010000}
+	{50 ELNStatus}
+	{52 ELNControl}
+	{54 ELNFIFO 16#F0}
+	{56 ELNFIFO 16#03}
+	{60 ELNStatus}
+	{62 ELNFIFO 16#03}
+	{64 ELNFIFO 16#00}
+	{66 ELNStatus}
+	{68 ELNControl 2#0001011}
+	{70 ELNControl}
+	{72 ELNStatus}
+	{200 ELNStatus}
+	{500 ELNStatus}
+}
+
+test subclock
+set CyclesAvalon {
+	{20 ELNControl 2#00010000}
+	{40 ELNControl 2#00001000}
+	{80 ELNControl 2#00011000}
+	{150 ELNControl 2#01000000}
+	{200 ELNControl 2#00100000}
+	{220 ELNStatus}
+}

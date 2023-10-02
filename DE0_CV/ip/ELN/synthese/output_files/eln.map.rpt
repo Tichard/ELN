@@ -1,0 +1,457 @@
+Analysis & Synthesis report for eln
+Fri Dec 22 10:08:36 2017
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |eln|State_machine:machineEtat|State_cr
+  9. State Machine - |eln|SerialData:serial|UC_SerialData:UC|Etat_cr
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: SerialData:serial
+ 15. Parameter Settings for User Entity Instance: SerialData:serial|UT_SerialData:UT
+ 16. Parameter Settings for User Entity Instance: CRC:parite
+ 17. Parameter Settings for User Entity Instance: FIFO_nMots_mBits:fifo
+ 18. Port Connectivity Checks: "FIFO_nMots_mBits:fifo"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Dec 22 10:08:36 2017       ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                   ; eln                                         ;
+; Top-level Entity Name           ; eln                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 137                                         ;
+; Total pins                      ; 24                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; eln                ; eln                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                             ; 4                  ;                    ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                 ;
++----------------------------------+-----------------+-----------------+---------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path          ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------+---------+
+; ../eln.vhd                       ; yes             ; User VHDL File  ; F:/DE0_CV/ip/ELN/eln.vhd              ;         ;
+; ../SerialData.vhd                ; yes             ; User VHDL File  ; F:/DE0_CV/ip/ELN/SerialData.vhd       ;         ;
+; ../FIFO_nMots_mBits.vhd          ; yes             ; User VHDL File  ; F:/DE0_CV/ip/ELN/FIFO_nMots_mBits.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------+---------+
+
+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimate of Logic utilization (ALMs needed) ; 307                 ;
+;                                             ;                     ;
+; Combinational ALUT usage for logic          ; 411                 ;
+;     -- 7 input functions                    ; 2                   ;
+;     -- 6 input functions                    ; 173                 ;
+;     -- 5 input functions                    ; 51                  ;
+;     -- 4 input functions                    ; 125                 ;
+;     -- <=3 input functions                  ; 60                  ;
+;                                             ;                     ;
+; Dedicated logic registers                   ; 137                 ;
+;                                             ;                     ;
+; I/O pins                                    ; 24                  ;
+;                                             ;                     ;
+; Total DSP Blocks                            ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; CRC:parite|level[5] ;
+; Maximum fan-out                             ; 127                 ;
+; Total fan-out                               ; 2561                ;
+; Average fan-out                             ; 4.30                ;
++---------------------------------------------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                 ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Entity Name      ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+------------------+--------------+
+; |eln                           ; 411 (39)            ; 137 (20)                  ; 0                 ; 0          ; 24   ; 0            ; |eln                                    ; eln              ; work         ;
+;    |CRC:parite|                ; 323 (323)           ; 46 (46)                   ; 0                 ; 0          ; 0    ; 0            ; |eln|CRC:parite                         ; CRC              ; work         ;
+;    |FIFO_nMots_mBits:fifo|     ; 11 (11)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |eln|FIFO_nMots_mBits:fifo              ; FIFO_nMots_mBits ; work         ;
+;    |SerialData:serial|         ; 28 (0)              ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |eln|SerialData:serial                  ; SerialData       ; work         ;
+;       |UC_SerialData:UC|       ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |eln|SerialData:serial|UC_SerialData:UC ; UC_SerialData    ; work         ;
+;       |UT_SerialData:UT|       ; 21 (21)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |eln|SerialData:serial|UT_SerialData:UT ; UT_SerialData    ; work         ;
+;    |State_machine:machineEtat| ; 10 (10)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |eln|State_machine:machineEtat          ; State_machine    ; work         ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------+
+; State Machine - |eln|State_machine:machineEtat|State_cr                                              ;
++---------------------+-------------------+--------------------+---------------------+-----------------+
+; Name                ; State_cr.s_Tx_CRC ; State_cr.s_Tx_Data ; State_cr.s_Tx_Start ; State_cr.s_Init ;
++---------------------+-------------------+--------------------+---------------------+-----------------+
+; State_cr.s_Init     ; 0                 ; 0                  ; 0                   ; 0               ;
+; State_cr.s_Tx_Start ; 0                 ; 0                  ; 1                   ; 1               ;
+; State_cr.s_Tx_Data  ; 0                 ; 1                  ; 0                   ; 1               ;
+; State_cr.s_Tx_CRC   ; 1                 ; 0                  ; 0                   ; 1               ;
++---------------------+-------------------+--------------------+---------------------+-----------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------+
+; State Machine - |eln|SerialData:serial|UC_SerialData:UC|Etat_cr                        ;
++--------------------+----------------+--------------------+--------------+--------------+
+; Name               ; Etat_cr.Serial ; Etat_cr.DRq_Serial ; Etat_cr.Load ; Etat_cr.Idle ;
++--------------------+----------------+--------------------+--------------+--------------+
+; Etat_cr.Idle       ; 0              ; 0                  ; 0            ; 0            ;
+; Etat_cr.Load       ; 0              ; 0                  ; 1            ; 1            ;
+; Etat_cr.DRq_Serial ; 0              ; 1                  ; 0            ; 1            ;
+; Etat_cr.Serial     ; 1              ; 0                  ; 0            ; 1            ;
++--------------------+----------------+--------------------+--------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                   ;
++----------------------------------------------------------+-----------------------------------------------------------+
+; Register name                                            ; Reason for Removal                                        ;
++----------------------------------------------------------+-----------------------------------------------------------+
+; SerialData:serial|UT_SerialData:UT|\Registres:counter[3] ; Merged with SerialData:serial|UT_SerialData:UT|serialBusy ;
+; Total Number of Removed Registers = 1                    ;                                                           ;
++----------------------------------------------------------+-----------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 137   ;
+; Number of registers using Synchronous Clear  ; 43    ;
+; Number of registers using Synchronous Load   ; 64    ;
+; Number of registers using Asynchronous Clear ; 68    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 60    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------+
+; Inverted Register Statistics                            ;
++-----------------------------------------------+---------+
+; Inverted Register                             ; Fan out ;
++-----------------------------------------------+---------+
+; clk_div[3]                                    ; 2       ;
+; SerialData:serial|UT_SerialData:UT|serialBusy ; 11      ;
+; CRC:parite|level[5]                           ; 127     ;
+; Total number of inverted registers = 3        ;         ;
++-----------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |eln|SerialData:serial|UT_SerialData:UT|\Registres:counter[1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |eln|SerialData:serial|UT_SerialData:UT|Data[7]               ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |eln|CRC:parite|level[1]                                      ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |eln|SerialData:serial|UT_SerialData:UT|Dec[5]                ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |eln|CRC:parite|level[4]                                      ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |eln|FIFO_nMots_mBits:fifo|Fifo[3][0]                         ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |eln|FIFO_nMots_mBits:fifo|Fifo[2][3]                         ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |eln|FIFO_nMots_mBits:fifo|Fifo[1][2]                         ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |eln|FIFO_nMots_mBits:fifo|Fifo[0][3]                         ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |eln|State_machine:machineEtat|Selector2                      ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |eln|SerialData:serial|UC_SerialData:UC|Etat_cr               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SerialData:serial ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SerialData:serial|UT_SerialData:UT ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; data_width     ; 8     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CRC:parite ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; data_width     ; 8     ; Signed Integer                 ;
+; size           ; 4     ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FIFO_nMots_mBits:fifo ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; data_width     ; 8     ; Signed Integer                            ;
+; fifo_size      ; 2     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FIFO_nMots_mBits:fifo"                                                                   ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; fifolevel ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 137                         ;
+;     CLR               ; 18                          ;
+;     CLR SCLR SLD      ; 40                          ;
+;     ENA               ; 26                          ;
+;     ENA CLR           ; 10                          ;
+;     ENA SLD           ; 24                          ;
+;     SCLR              ; 3                           ;
+;     plain             ; 16                          ;
+; arriav_lcell_comb     ; 413                         ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 411                         ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 29                          ;
+;         3 data inputs ; 30                          ;
+;         4 data inputs ; 125                         ;
+;         5 data inputs ; 51                          ;
+;         6 data inputs ; 173                         ;
+; boundary_port         ; 24                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.37                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Fri Dec 22 10:08:23 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ELNSynth -c eln
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Info (12021): Found 6 design units, including 3 entities, in source file /de0_cv/ip/eln/eln.vhd
+    Info (12022): Found design unit 1: State_machine-rtl File: F:/DE0_CV/ip/ELN/eln.vhd Line: 15
+    Info (12022): Found design unit 2: CRC-rtl File: F:/DE0_CV/ip/ELN/eln.vhd Line: 88
+    Info (12022): Found design unit 3: eln-rtl File: F:/DE0_CV/ip/ELN/eln.vhd Line: 147
+    Info (12023): Found entity 1: State_machine File: F:/DE0_CV/ip/ELN/eln.vhd Line: 8
+    Info (12023): Found entity 2: CRC File: F:/DE0_CV/ip/ELN/eln.vhd Line: 79
+    Info (12023): Found entity 3: eln File: F:/DE0_CV/ip/ELN/eln.vhd Line: 138
+Info (12021): Found 6 design units, including 3 entities, in source file /de0_cv/ip/eln/serialdata.vhd
+    Info (12022): Found design unit 1: UC_SerialData-rtl File: F:/DE0_CV/ip/ELN/SerialData.vhd Line: 21
+    Info (12022): Found design unit 2: UT_SerialData-rtl File: F:/DE0_CV/ip/ELN/SerialData.vhd Line: 84
+    Info (12022): Found design unit 3: SerialData-rtl File: F:/DE0_CV/ip/ELN/SerialData.vhd Line: 175
+    Info (12023): Found entity 1: UC_SerialData File: F:/DE0_CV/ip/ELN/SerialData.vhd Line: 15
+    Info (12023): Found entity 2: UT_SerialData File: F:/DE0_CV/ip/ELN/SerialData.vhd Line: 76
+    Info (12023): Found entity 3: SerialData File: F:/DE0_CV/ip/ELN/SerialData.vhd Line: 167
+Info (12021): Found 2 design units, including 1 entities, in source file /de0_cv/ip/eln/fifo_nmots_mbits.vhd
+    Info (12022): Found design unit 1: FIFO_nMots_mBits-rtl File: F:/DE0_CV/ip/ELN/FIFO_nMots_mBits.vhd Line: 21
+    Info (12023): Found entity 1: FIFO_nMots_mBits File: F:/DE0_CV/ip/ELN/FIFO_nMots_mBits.vhd Line: 11
+Info (12127): Elaborating entity "eln" for the top level hierarchy
+Info (12128): Elaborating entity "SerialData" for hierarchy "SerialData:serial" File: F:/DE0_CV/ip/ELN/eln.vhd Line: 156
+Info (12128): Elaborating entity "UT_SerialData" for hierarchy "SerialData:serial|UT_SerialData:UT" File: F:/DE0_CV/ip/ELN/SerialData.vhd Line: 179
+Info (12128): Elaborating entity "UC_SerialData" for hierarchy "SerialData:serial|UC_SerialData:UC" File: F:/DE0_CV/ip/ELN/SerialData.vhd Line: 190
+Info (12128): Elaborating entity "State_machine" for hierarchy "State_machine:machineEtat" File: F:/DE0_CV/ip/ELN/eln.vhd Line: 167
+Info (12128): Elaborating entity "CRC" for hierarchy "CRC:parite" File: F:/DE0_CV/ip/ELN/eln.vhd Line: 182
+Warning (10540): VHDL Signal Declaration warning at eln.vhd(90): used explicit default value for signal "poly" because signal was never assigned a value File: F:/DE0_CV/ip/ELN/eln.vhd Line: 90
+Info (12128): Elaborating entity "FIFO_nMots_mBits" for hierarchy "FIFO_nMots_mBits:fifo" File: F:/DE0_CV/ip/ELN/eln.vhd Line: 195
+Info (286030): Timing-Driven Synthesis is running
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register CRC:parite|level[5] will power up to High File: F:/DE0_CV/ip/ELN/eln.vhd Line: 99
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 480 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 456 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 722 megabytes
+    Info: Processing ended: Fri Dec 22 10:08:36 2017
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:23
+
+
