@@ -10,13 +10,13 @@ et une interface d’interconnexion Avalon.
 ### [Compte Rendu Projet](project_report.pdf)
 
 ### C source code :
-- [main.c](DE0_CV/software/main.c)
-- [API and registers definition](DE0_CV/software/BSP/Drivers)
+- [main.c](DE0_CV/software/src/main.c)
+- [API and registers definition](DE0_CV/software/bsp/drivers)
 
 ### VHDL source code :
 - [eln.vhd](DE0_CV/DE0_CV_QSYS/synthesis/submodules/eln.vhd)
-- [FIFO_nMots_nBits.vhd](DE0_CV/DEO_CV_QSYS/synthesis/submodules/FIFO_nMots_nBits.vhd)
-- [SerialData.vhd](DE0_CV/DEO_CV_QSYS/synthesis/submodules/SerialData.vhd)
+- [FIFO_nMots_nBits.vhd](DE0_CV/DE0_CV_QSYS/synthesis/submodules/FIFO_nMots_mBits.vhd)
+- [SerialData.vhd](DE0_CV/DE0_CV_QSYS/synthesis/submodules/SerialData.vhd)
 
 ---
 
